@@ -1,0 +1,27 @@
+function ex1() {
+    //  Сформировать массив (объект Array), элементами которого являются
+    //  значения выражений
+
+    arr = new Array();
+
+    arr[0] = 6 * Math.pow(Math.PI, 2) + 3 * Math.exp(8);
+    arr[1] = 2 * Math.cos(12) + 8 * Math.exp(3);
+    arr[2] = 3 * Math.sin(9) + Math.log10(5) + Math.sqrt(3);
+    arr[3] = 2 * Math.tan(5) + 6 * Math.PI + Math.sqrt(12);
+
+    document.write("<p>");
+
+    for (let i = 0; i < arr.length; i++) {
+        document.write(i + ". " + arr[i] + "</br>");
+    }
+
+    maxVal = Math.max.apply(null, arr)
+    maxValIndex = arr.indexOf(Math.max(...arr))
+
+    minVal = Math.min.apply(null, arr)
+    minValIndex = arr.indexOf(Math.min(...arr))
+
+    document.write("<p>Максимальный элемент в массиве: " + maxValIndex +") " + maxVal + "</p>");
+    document.write("<p>Минимальный элемент в массиве: " + minValIndex +") " + minVal + "</p>");
+    document.write("</p>");
+}
