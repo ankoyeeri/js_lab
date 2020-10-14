@@ -57,7 +57,23 @@ function ex2() {
     document.write("Методы Array: " + arrArray + "</br>");
     document.write("Методы Math: " + arrMath + "</br>");
     document.write("Длина исходного массива: " + arr.length + "</br>");
-    document.write("Длина массива Array: " + arrArray.length +"</br>");
-    document.write("Длина массива Math: " + arrMath.length +"</br>");
+    document.write("Длина массива Array: " + arrArray.length + "</br>");
+    document.write("Длина массива Math: " + arrMath.length + "</br>");
+    document.write("</p>");
+}
+
+function ex3() {
+    let varStr = new String("Гуз Ярослав Максимович");
+
+    let upperCase = varStr.toUpperCase();
+    let lowerCase = varStr.toLowerCase();
+
+    document.write("<p>");
+    document.write("Строка: " + varStr + "</br>");
+    document.write("Длина строки: " + varStr.length + "</br>");
+    document.write("Перевод строки в верхний регистр: " + upperCase +"</br>")
+    document.write("Перевод строки в нижний регистр: " + lowerCase +"</br>")
+    document.write("Слияние строк: " + upperCase.concat(lowerCase) + "</br>")
+    document.write("Замена строки: " + varStr.replace(varStr,"Г.Я.М") + "</br>")
     document.write("</p>");
 }
