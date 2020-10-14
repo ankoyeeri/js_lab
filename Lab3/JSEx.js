@@ -71,9 +71,22 @@ function ex3() {
     document.write("<p>");
     document.write("Строка: " + varStr + "</br>");
     document.write("Длина строки: " + varStr.length + "</br>");
-    document.write("Перевод строки в верхний регистр: " + upperCase +"</br>")
-    document.write("Перевод строки в нижний регистр: " + lowerCase +"</br>")
-    document.write("Слияние строк: " + upperCase.concat(lowerCase) + "</br>")
-    document.write("Замена строки: " + varStr.replace(varStr,"Г.Я.М") + "</br>")
+    document.write("Перевод строки в верхний регистр: " + upperCase +"</br>");
+    document.write("Перевод строки в нижний регистр: " + lowerCase +"</br>");
+    document.write("Слияние строк: " + upperCase.concat(lowerCase) + "</br>");
+    document.write("Замена строки: " + varStr.replace(varStr,"Г.Я.М") + "</br>");
     document.write("</p>");
+}
+
+function ex4(){
+    let varDate = new Date();
+
+    document.write("<table border = 1px cellpadding = 10 alighn = center>");
+    document.write("<tr><td>Год</td><td>"+ varDate.getFullYear() +"</td></tr>");
+    document.write("<tr><td>Месяц</td><td>"+ varDate.getMonth() +"</td></tr>");
+    document.write("<tr><td>День</td><td>"+ varDate.getDay() +"</td></tr>");
+    document.write("<tr><td>Час</td><td>"+ varDate.getHours() +"</td></tr>");
+    document.write("<tr><td>Минуты</td><td>"+ varDate.getMinutes() +"</td></tr>");
+    document.write("<tr><td>Секунды</td><td>"+ varDate.getSeconds() +"</td></tr>");
+    document.write("</table>");
 }
