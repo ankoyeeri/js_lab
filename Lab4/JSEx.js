@@ -93,3 +93,71 @@ function ex2() {
     document.write("Курс третьего студента: " + student3.year + "</br>")
     document.write("</p>");
 }
+
+
+function ex3(){
+
+    let arr = new Array();
+    arr[0] = 6 * Math.pow(Math.PI, 2) + 3 * Math.exp(8);
+    arr[1] = 2 * Math.cos(12) + 8 * Math.exp(3);
+    arr[2] = 3 * Math.sin(9) + Math.log10(5) + Math.sqrt(3);
+    arr[3] = 2 * Math.tan(5) + 6 * Math.PI + Math.sqrt(12);
+    // let array = new Array(1, 2, 3, 4);
+    let varStr = new String("Гуз Ярослав Максимович");
+
+    //  Delete
+    delete arr[3];
+    document.write("<p>")
+    document.write("Delete </br>")
+    for(let i = 0; i < arr.length; i++){
+        document.write(i + ") " + arr[i] + "</br>");
+    }
+    document.write("</p>")
+    
+    let student1 = new Student("Ярослав", "Гуз", 10, 8, 7);
+    let student2 = new Student("Дмитрий", "Ваганыч", 4, 10, 7);
+    let student3 = new Student("Виталий", "Озон", 7, 6, 9);
+
+    let group1 = new Gruppa(2, "ИСиТ", 28);
+    let group2 = new Gruppa(3, "ПОиТ", 30)
+
+    function numbers5(){
+        let num = 5;
+        return num;
+    }
+
+    //  In
+    //  Ввести сюда искомое свойство
+    let srchblVar = 'name';
+    document.write("<p>");
+    document.write("In: </br>");
+    document.write("Существует ли пятый элемент в массиве: " + (5 in arr) + "</br>");
+    document.write("Существует ли метод 'n' в классе Gruppa: " + ('n' in Gruppa) + "</br>");
+    document.write("Существует ли метод 'name' в классе Student: " + ('name' in Student) + "</br>");
+    document.write("</p>");
+
+    //  Instanceof
+    document.write("<p>");
+    document.write("Instanceof: </br>");
+    document.write("Массив 'arr' является объектомм Array: " + (arr instanceof Array) + "</br>");
+    document.write("Массив 'arr' является объектомм String: " + (arr instanceof String) + "</br>");
+    document.write("Массив 'arr' является объектомм Object: " + (arr instanceof Object) + "</br>");
+    document.write("</p>");
+
+    //  Typeof
+    document.write("<p>");
+    document.write("Typeof: </br>");
+    document.write("Typeof 'arr': "+ (typeof arr)+"</br>");
+    document.write("Typeof 'varStr': "+ (typeof varStr) +"</br>");
+    document.write("Typeof 'group1': "+ (typeof group1) +"</br>");
+    document.write("Typeof 'group2': "+ (typeof group2) +"</br>");
+    
+    document.write("Typeof 'student1': "+ (typeof student1) +"</br>");
+    document.write("Typeof 'student1.name': "+ (typeof student1.name) +"</br>");
+
+    document.write("Typeof 'student2': "+ (typeof student2) +"</br>");
+    document.write("Typeof 'student2.physicSubj': "+ (typeof student2.physicSubj) +"</br>");
+
+    document.write("Typeof 'student3': "+ (typeof num) +"</br>");
+    document.write("</p>");
+}

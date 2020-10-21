@@ -26,9 +26,9 @@ function ex3() {
 
     do {
         document.write("<tr>")
-        document.write("<td>" + r + "</td>")
-        document.write("<td>" + Math.PI * Math.pow(r, 2) + "</td>")
-        document.write("<td>" + 2 * Math.PI * r + "</td>")
+        document.write("<td>" + Math.floor(r*10)/10 + "</td>")
+        document.write("<td>" + Math.floor(Math.PI * Math.pow(r, 2)*10)/10 + "</td>")
+        document.write("<td>" + Math.floor(2 * Math.PI * r * 10)/10 + "</td>")
         document.write("</tr>")
         r = r + 0.3
     }
