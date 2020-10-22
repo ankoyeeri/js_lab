@@ -1,0 +1,383 @@
+<html>
+
+<head>
+    <title>Моя первая страница</title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <script src="/Lab5/JSEx.js"></script>
+
+    <style>
+
+        /* ЛР 5. Демонстрация возможностей CSS3 */
+        /* ЛР 5. Фон  CSS3*/
+        #backgroundCSS3{
+            /* Фон с изображением */
+            /* background-image: url(/images/background_gradient.jpg);
+            background-size: 1920px 1080px; */
+
+            /* Фон-градиент */
+            background: radial-gradient(#eff1fb, #7f5fdd)
+        }
+
+        /* ЛР 5. Текст CSS3*/
+        #textCSS3First{
+            text-shadow: 3px 1px rgba(0, 0, 0, 0.281);
+            text-overflow: ellipsis;
+        }
+        #textCSS3Second{
+            text-shadow: 1px 1px 10px hsla(0, 5%, 22%, 0.42);
+            text-overflow: clip;
+        }
+        #textCSS3Third{
+            text-shadow: 2px 2px 2px #2d363b3a, 2px  2px 15px #3c3c5860;
+        }
+
+        /* ЛР 5. Переходы */
+        .transionElement{
+            margin-top: 20px;
+            width: 300px;
+            height: 100px;
+            background-color: blueviolet;
+
+            transition: width 2s;
+        }
+
+        .transionElement:hover{
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Первый абзац */
+        .firstP {
+            color: rgb(0, 0, 255);
+            font-size: 0.5cm;
+            font-family: Arial, Helvetica, sans-serif;
+
+            text-align: justify;
+
+            word-spacing: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Второй абзац */
+        .secondP {
+            color: rgba(146, 73, 5, 0.705);
+            font-size: 120%;
+            font-family: cursive;
+
+            text-align: center;
+
+            word-spacing: 15px;
+            letter-spacing: 0.8px;
+        }
+
+        /* Третий абзац */
+        .thirdP {
+            color: hsla(0, 79%, 36%, 0.712);
+            font-size: 20pt;
+            font-family: serif;
+
+            text-align: right;
+
+            word-spacing: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* Цвет фона */
+        .bgColor {
+            background-color: wheat;
+        }
+
+        /* Выделение слова в первом абзаце в теге span */
+        span#firstSpanId {
+            color: maroon;
+            font-family: monospace;
+            font-style: italic;
+
+        }
+
+        /* Выделение слова во втором абзаце в теге span */
+        span#secondSpanId {
+            color: red;
+            font-family: serif;
+            font-style: oblique;
+        }
+
+        /* Стиль первого уровня списка */
+        .firstListLevel {
+            list-style-type: upper-roman;
+            font-style: inherit;
+            color: black;
+        }
+
+        /* Стиль второго уровня списка */
+        .secondListLevel {
+            list-style-type: circle;
+            font-style: italic;
+            color: midnightblue;
+        }
+
+        /* Маркер-картинка списка */
+        .listImageStyle{
+            list-style-image: url(/images/marker.png);
+        }
+
+        /* ЛР 3. Использование псевдо-класса для ссылок */
+        /* ЛР 3. Стиль, когда ссылка посещена */
+        a:visited{
+            color: green;
+        }
+        /* ЛР 3. Стиль, когда ссылка активна */
+        a:active{
+            color: red;
+        }
+
+        /* ЛР 3. Оформление таблицы при помощи таблицы стилей. */
+        /* ЛР 3. Задание цвета, шрифта и границ для таблицы */
+        table{
+            color:black;
+            font-family:cursive;
+            border:4px thick;
+        }
+        /* ЛР 3. Задание выравнивания и стилей для заголовков таблицы */
+        th{
+            text-align: center;
+            text-decoration: underline;
+            font-size: 20px;
+            padding: 10px;
+        }
+        /* ЛР 3. Задание цвета, стиля текста, выравнивания и пр. для элементов таблицы */
+        td{
+            color:navy;
+            font-family: serif;
+            text-align: center;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        /* ЛР 3. Изменить цвет текста первого абзаца, используя first-child */
+        p:first-child{
+            color: lime;
+        }
+
+        /* ЛР 3. Первая буква абзаца */
+        p:first-letter{
+            color: red;
+            font-size: 25px;
+            border: 0.5px solid red;
+        }
+        
+        /* ЛР 3. Подчеркнуть первую строку абзацев */
+        p:first-line{
+            text-decoration: underline black;
+        }
+</style>
+
+</head>
+
+<!-- ЛР 5. Удален класс bgColor, чтобы вместо него использовать айди -->
+<body id="backgroundCSS3">
+        <div>
+            <input type="button" value="Задание 1" onclick="ex1()">
+            <input type="button" value="Задание 2" onclick="ex2()">
+        <!-- <input type="button" value="Задание 3" onclick="ex3()"> -->        
+        <!-- <input type="button" value="Задание 4" onclick="ex4()"> -->
+        <!-- <script>ex1()</script> -->
+
+        </div>
+        
+    <h1>Я, <a href="/Lab_5/ex2.html">Гуз Ярослав Максимович</a>, изучаю <span style="color:red">HTML</span> и CSS</h1>
+    <h2>Что такое HTML</h2>
+    <h3>Определение HTML</h3>
+    <!-- ЛР 5. Добавление айди с параметрами текста -->
+        <p class="firstP" id="textCSS3">
+            <!-- ЛР 3. Перед ФИО добавить текст "студент I курса", после ФИО -
+        "проживающий по адресу ..." -->
+            Студент I курса Гуз Ярослав Максимович проживающий по адресу Независимости 25А <br><br>
+            <span id="firstSpanId">HTML</span>
+            (HyperText Markup Language —
+            «язык гипертекстовой разметки») — самый
+            базовый строительный блок Веба. Он определяет
+            содержание и структуру веб-контента. Другие технологии,
+            помимо <span id="firstSpanId">HTML</span>, обычно используются для
+            описания внешнего
+            вида/представления (CSS) или функциональности/поведения
+            (JavaScript) веб-страницы.<br>
+        </p>
+    <h3>Понятие hypertext</h3>
+    <!-- ЛР 5. Добавление айди для текста второго абзаца -->
+        <p class="secondP" id="textCSS3Second">
+            Под <span id="secondSpanId">гипертекстом</span>
+            ("hypertext") понимаются ссылки,
+            которые соединяют веб-страницы друг с другом либо
+            в пределах одного веб-сайта, либо между веб-сайтами.
+            Ссылки являются фундаментальным аспектом Веба.
+            Загружая контент в <span id="secondSpanId">Интернет</span>
+            и связывая его со
+            страницами, созданными другими людьми, вы становитесь
+            активным участником Всемирной паутины.
+        </p>
+    
+    <h3>Факт об HTML</h3>
+    <!-- ЛР 5. Добавление айди для текста третьего абзаца -->
+    <p class="thirdP" id="textCSS3Third">
+        Язык <span style="color:black; border-bottom: dotted;">HTML</span>
+        до 5-й версии определялся как приложение
+        SGML (стандартного обобщённого языка разметки по
+        стандарту ISO 8879). Спецификации <span style="color:black; border-bottom: dotted;">HTML5</span>
+        формулируются в терминах DOM (объектной модели документа).
+    </p>
+
+    <div>
+        <h2>Таблица элементов</h2>
+        <ol class="firstListLevel">
+            <li>
+                Элемент 1
+                <ul class="secondListLevel">
+                    <li>
+                        Элемент 1.1
+                    </li>
+                    <li>
+                        Элемент 1.2
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Элемент 2
+                <ul class="secondListLevel">
+                    <li>
+                        Элемент 2.1
+                    </li>
+                    <li>
+                        Элемент 2.2
+                    </li>
+                    <li>
+                        Элемент 2.3
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Элемент 3
+                <ul class="secondListLevel">
+                    <li>
+                        Элемент 3.1
+                    </li>
+                    <li>
+                        Элемент 3.2
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+
+    <div>
+        Список с использованием маркера-картинки
+        <ul class="listImageStyle">
+            <li>
+                Элемент 1
+            </li>
+            <li>
+                Элемент 2
+            </li>
+            <li>
+                Элемент 3
+            </li>
+        </ul>
+
+    </div>
+
+    <div>
+        <table border="1px">
+            <tr>
+                <th>
+                    ФИО
+                </th>
+                <th colspan="3">
+                    <span style="text-decoration: underline;"><a href="/ex2.html">Гуз Ярослав Максимович</a></span>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Свое фото
+                </th>
+                <th colspan="3">
+                    Адрес: ул. Белорусская, д.5, ком.430
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="6">
+                    1 семестр<br>
+                    2016/2017 уч. года
+                </th>
+                <th>
+                    Дата
+                </th>
+                <th>Предмет</th>
+                <th>Оценка</th>
+            </tr>
+            <tr>
+                <td>
+                    31.12.2016
+                </td>
+                <td>
+                    ОАиП
+                </td>
+                <td>
+                    6
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    5.01.2017
+                </td>
+                <td>
+                    Физика
+                </td>
+                <td>
+                    9
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    11.01.2017
+                </td>
+                <td>
+                    ОИТ
+                </td>
+                <td>
+                    4
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    16.01.2017
+                </td>
+                <td>
+                    Математика
+                </td>
+                <td>
+                    6
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    22.01.2017
+                </td>
+                <td>
+                    АЛОЦВМ
+                </td>
+                <td>
+                    8
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="transionElement">
+        <span style="color:white; text-align: center;">Текст</span>
+    </div>
+
+</body>
+
+</html>
