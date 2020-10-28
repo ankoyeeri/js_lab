@@ -41,3 +41,20 @@ function writeRandText2(){
 }
 
 //-------------------------
+
+function ex2(){
+    document.write("<table border=1>");
+    document.write("<tr><td>Свойство</td> <td>Значение</td></tr>");
+    document.write("<tr><td>Браузер пользователя<br>window.navigator.userAgent</td> <td>"+ window.navigator.userAgent +"</td></tr>");
+    document.write("<tr><td>Версия браузера<br>window.navigator.appVersion</td> <td>"+ window.navigator.appVersion +"</td></tr>");
+    document.write("<tr><td>Кодовое название браузера<br>window.navigator.appCodeName</td> <td>"+ window.navigator.appCodeName +"</td></tr>");
+    document.write("<tr><td>ОС, которую использует пользователь<br></td>window.navigator.platform<td>"+ window.navigator.platform +"</td></tr>");
+    document.write("<tr><td>Включена ли поддержка Java в браузере<br>window.navigator.javaEnabled()</td> <td>"+ window.navigator.javaEnabled() +"</td></tr>");
+    document.write("<tr><td>Ширина и высота экрана<br>screen.width, screen.height</td> <td>Ширина: "+ screen.width +"<br> Высота:"+ screen.height +"</td></tr>");
+    document.write("<tr><td>Глубина цвета<br>screen.colorDepth</td> <td>"+ screen.colorDepth +"</td></tr>");
+    document.write("<tr><td>URL, которые были посещены в данном окне браузера<br>history</td> <td>"+ history.length +"</td></tr>");
+    document.write("<tr><td>URL текущего документа<br>location.href</td><td>"+ location.href +"</td></tr>");
+    document.write("<tr><td>Путь к загруженному документу<br>location.pathname</td> <td>"+ location.pathname +"</td></tr>");
+    document.write("<tr><td>Имя домена загруженного документа<br>location.host</td> <td>"+ location.host +"</td></tr>");
+    document.write("</table>");
+}
