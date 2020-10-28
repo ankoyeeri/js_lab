@@ -26,17 +26,21 @@
             font-size: 20;
             font-weight: bold;
         }
+
+        #central{
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <h1>Проверка скриптов</h1>
     <div>
-        <form name="dataForm">
+        <form name=data>
             <textarea name="textArea" rows="3" cols="20">Факультет информационных технологий</textarea>
             <p>
-                <input name="surname" type="text" value="Фамилия"> <br>
-                <input name="name" type="text" value="Имя">
+                <input name=surname type="text" placeholder="Фамилия"><br>
+                <input name="name" type="text" placeholder="Имя">
             </p>
 
             <p>
@@ -51,19 +55,19 @@
 
             <p>
                 <b style="font-size: 20px;">Курс</b><br>
-                <b><input name="year" type="radio" value="1" checked> 1</b>
-                <b><input name="year" type="radio" value="2"> 2</b>
-                <b><input name="year" type="radio" value="3"> 3</b>
-                <b><input name="year" type="radio" value="4"> 4</b>            
+                <b><input name="year" type="radio" value=1 checked> 1</b>
+                <b><input name="year" type="radio" value=2> 2</b>
+                <b><input name="year" type="radio" value=3> 3</b>
+                <b><input name="year" type="radio" value=4> 4</b>            
             </p>
 
             <p>
                 <b style="font-size: 20px;">Предметы</b><br>
-                <b><input name="subj1" type="checkbox" value="ОИТ" checked>ОИТ</b>
-                <b><input name="subj2" type="checkbox" value="ОАП">ОАП</b>
-                <b><input name="subj3" type="checkbox" value="История">История</b>
-                <b><input name="subj4" type="checkbox" value="Физика">Физика</b>
-                <b><input name="subj5" type="checkbox" value="Математика">Математика</b>
+                <b><input name="subject" type="checkbox" value="ОИТ" checked>ОИТ</b>
+                <b><input name="subject" type="checkbox" value="ОАП">ОАП</b>
+                <b><input name="subject" type="checkbox" value="Физика">Физика</b>
+                <b><input name="subject" type="checkbox" value="Математика">Математика</b>
+                <b><input name="subject" type="checkbox" value="История">История</b>
             </p>
 
             <p>
@@ -72,9 +76,13 @@
             </p>
             
             <p>
-                <input type="button" value="Напечатать">
+                <input type="button" value="Напечатать" onclick="ex3()">
             </p>
         </form>
+
+        <div id="jsPrint">
+            <div id="jsList"></div>
+        </div>
     </div>
 </body>
 
