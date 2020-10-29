@@ -27,7 +27,7 @@
             font-weight: bold;
         }
 
-        #central{
+        #central {
             text-align: center;
         }
     </style>
@@ -58,7 +58,7 @@
                 <b><input name="year" type="radio" value=1 checked> 1</b>
                 <b><input name="year" type="radio" value=2> 2</b>
                 <b><input name="year" type="radio" value=3> 3</b>
-                <b><input name="year" type="radio" value=4> 4</b>            
+                <b><input name="year" type="radio" value=4> 4</b>
             </p>
 
             <p>
@@ -74,11 +74,22 @@
                 <input type="submit" value="submit">
                 <input type="reset" value="reset">
             </p>
-            
+
             <p>
                 <input type="button" value="Напечатать" onclick="ex3()">
             </p>
         </form>
+
+        <div>
+            <b>Новый список</b><br>
+            <input type="button" onclick="ex4()" value="Сгенерировать">
+            <form name="secondForm">
+            <select name="list" id="newList">
+
+            </select>       
+            </form>
+        </div>
+
 
         <div id="jsPrint">
             <div id="jsList"></div>

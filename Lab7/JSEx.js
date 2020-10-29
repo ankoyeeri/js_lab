@@ -21,6 +21,13 @@ function ex3(){
     }
     catch(err){
         alert(err);
+    }   
+}
+
+function ex4(){
+    for(let i = 0; i < 5; i++){
+        if(document.forms["data"].subject[i].checked){
+            document.getElementById("newList").innerHTML += "<option name>" + document.forms["data"].subject[i].value  + "</option>"
+        }
     }
-    
 }
