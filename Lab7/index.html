@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>Lab 2</title>
+    <script src="/Lab7/JSEx.js"></script>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+
+        p {
+            font-family: 'Times New Roman';
+            font-size: 20px;
+        }
+
+        input#button {
+            width: auto;
+            height: 40px;
+            background-color: coral;
+            color: cornsilk;
+            font-size: 20px;
+            border-radius: 10%;
+        }
+
+        textarea {
+            font-size: 20;
+            font-weight: bold;
+        }
+
+        #central {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Проверка скриптов</h1>
+    <div>
+        <form name=data>
+            <textarea name="textArea" rows="3" cols="20">Факультет информационных технологий</textarea>
+            <p>
+                <input name=surname type="text" placeholder="Фамилия"><br>
+                <input name="name" type="text" placeholder="Имя">
+            </p>
+
+            <p>
+                <b style="font-size: 20px;">Специальность</b>
+                <select name="select">
+                    <option name="s1" value="ИСиТ">ИСиТ</option>
+                    <option selected name="s2" value="ПОИТ">ПОИТ</option>
+                    <option name="s3" value="ПОИБМС">ПОИБМС</option>
+                    <option name="s4" value="ДЭВИ">ДЭВИ</option>
+                </select>
+            </p>
+
+            <p>
+                <b style="font-size: 20px;">Курс</b><br>
+                <b><input name="year" type="radio" value=1 checked> 1</b>
+                <b><input name="year" type="radio" value=2> 2</b>
+                <b><input name="year" type="radio" value=3> 3</b>
+                <b><input name="year" type="radio" value=4> 4</b>
+            </p>
+
+            <p>
+                <b style="font-size: 20px;">Предметы</b><br>
+                <b><input name="subject" type="checkbox" value="ОИТ" checked>ОИТ</b>
+                <b><input name="subject" type="checkbox" value="ОАП">ОАП</b>
+                <b><input name="subject" type="checkbox" value="Физика">Физика</b>
+                <b><input name="subject" type="checkbox" value="Математика">Математика</b>
+                <b><input name="subject" type="checkbox" value="История">История</b>
+            </p>
+
+            <p>
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </p>
+
+            <p>
+                <input type="button" value="Напечатать" onclick="ex3()">
+            </p>
+        </form>
+
+        <div>
+            <b>Новый список</b><br>
+            <input type="button" onclick="ex4()" value="Сгенерировать">
+            <form name="secondForm">
+            <select name="list" id="newList">
+
+            </select>       
+            </form>
+        </div>
+
+
+        <div id="jsPrint">
+            <div id="jsList"></div>
+        </div>
+    </div>
+</body>
+
+</html>
