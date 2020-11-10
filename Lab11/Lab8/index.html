@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Lab 8</title>
+        <script type="text/javascript" src="/jQuerry/jquery-3.5.1.js"></script>
+        <style>
+            body{
+                background-color: burlywood;
+            }
+            p{
+                font-family: sans-serif;
+                font-size: 20px;
+            }
+            input{
+                width: auto;
+                height: 40px;
+                background-color:coral;
+                color: cornsilk;
+                font-size: 20px;
+                border-radius: 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Проверка скриптов</h1>
+        <div>
+            <h3>Задание 1</h3>
+            <span id="text1">Наведи мышь </span>
+            <script>
+                $("#text1").mouseover(function(){$("#text1").css("color", "red")});
+                $("#text1").mouseleave(function(){$("#text1").css("color", "black")});
+            </script>
+        </div>
+
+        <div>
+            <h3>Задание 2</h3>
+            <span id="text2">Щелкни</span>
+            <script>
+                $("#text2").click(function(){$("#text2").css("font-size", "25px")});
+            </script>
+        </div>
+
+        <div>
+            <h3>Задание 3</h3>
+            <img id="img1" src="retro.jpg" width="250">
+            <script>
+                $("#img1").click(function(){$("#img1").css("content", 'url(view.png)')});
+            </script>
+        </div>
+
+        <div>
+            <h3>Задание 4</h3>
+            <span id="text3">Нажми, чтобы появилось изображение</span>
+            <script>
+                $("#text3").click(function(){$("#text3").css({
+                    "content": 'url(retro.jpg)',
+                    "width": "250px"
+                })});
+            </script>
+        </div>
+
+        <div>
+            <h3>Задание 5</h3>
+            <img id="img2" src="view.png" width="200">
+            <script>
+                $("#img2").mouseover(function(){$("#img2").css({width: "300px"})});
+                $("#img2").mouseout(function(){$("#img2").css({width: "250px"})});
+            </script>
+        </div>
+
+        <div>
+            <h3>Задание 6</h3>
+            <span id="text4">Текст</span>
+            <script>
+                $("#text4").dblclick(function(){$("#text4").css({border: "solid red 1px"})});
+            </script>
+        </div>
+    </body>
+</html>
