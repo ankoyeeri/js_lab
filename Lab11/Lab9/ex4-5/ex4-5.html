@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Lab 9</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+
+        p {
+            position: absolute;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        input {
+            width: auto;
+            height: 40px;
+            background-color: coral;
+            color: cornsilk;
+            font-size: 20px;
+            border-radius: 10%;
+        }
+    </style>
+    <script src="/Lab9/ex4-5/ex4.js"></script>
+</head>
+
+<body>
+    <div>
+        <form name="data">
+            <fieldset>
+                <legend>Функции</legend>
+                <input type="button" value="y = x^2" onclick="fun1()">
+                <input type="button" value="y = x^3" onclick="fun2()">
+                <input type="button" value="y = sin(x)" onclick="fun3()">
+                <input type="button" value="y = cos(x)" onclick="fun4()">
+    
+                <select name="slct" id="select">
+                    <option name="s1" value="#FF0000">Красный</option>
+                    <option name="s2" value="#008000">Зеленый</option>
+                    <option name="s3" value="#000000">Черный</option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <canvas id="canvas" width="500px" height="500px">
+        </canvas>
+    </div>
+</body>
+
+</html>

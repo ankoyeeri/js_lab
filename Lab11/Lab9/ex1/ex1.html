@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Lab 8</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+
+        p {
+            position: absolute;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        input {
+            width: auto;
+            height: 40px;
+            background-color: coral;
+            color: cornsilk;
+            font-size: 20px;
+            border-radius: 10%;
+        }
+    </style>
+    <script src="/jQuerry/jquery-3.5.1.js"></script>
+    <script src="/jQuerry/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <img id="mvElem" src="view.png" alt width="200" style="position: absolute; top: 60px;">
+        <script>
+            $(function () {
+                $("#mvElem").draggable();
+            });
+        </script>
+    </div>
+
+    <div>
+        <span id="mvTxt" draggable="false" style="position: absolute;">Зажми и передвинь</span>
+        <script>
+            $(function () {
+                $("#mvTxt").draggable();
+            });
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>Lab 9</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+
+        p {
+            position: absolute;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        input{
+            width: auto;
+            height: 40px;
+            background-color: coral;
+            color: cornsilk;
+            font-size: 20px;
+            border-radius: 10%;
+        }
+
+        .menu-item{
+            border: 2px solid black;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+
+            width: 67px;
+            margin-left: 15px;
+        }
+
+        .menu-item .submenu{
+            height: 40px;
+            width: auto;
+            border: 2px solid brown;
+            position: absolute;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+    <script src="/Lab9/ex4-5/ex4.js"></script>
+</head>
+
+<body>
+    <div id="nav"> 
+
+    <div class="menu-item">
+        Меню 1
+        <div class="submenu">
+            Подменю
+        </div>
+    </div>
+
+    <div class="menu-item">
+        Меню 2
+        <div class="submenu">
+            Подменю
+        </div>
+    </div>
+
+    <div class="menu-item">
+        Меню 3
+        <div class="submenu">
+            Подменю
+        </div>
+    </div>
+
+    </div>
+    <script src="ex6.js"></script>
+</body>
+
+</html>
