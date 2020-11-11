@@ -22,19 +22,22 @@
             border-radius: 10%;
         }
     </style>
-    <script src="/Lab9/ex4-5/ex4.js"></script>
+
+    <script src="/jQuerry/jquery-3.5.1.js"></script>
+    <script src="/jQuerry/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
     <div>
-        <form name="data">
+        <form name="data" onsubmit="testFunc()">
             <fieldset>
                 <legend>Функции</legend>
-                <input type="button" value="y = x^2" onclick="fun1()">
-                <input type="button" value="y = x^3" onclick="fun2()">
-                <input type="button" value="y = sin(x)" onclick="fun3()">
-                <input type="button" value="y = cos(x)" onclick="fun4()">
-    
+                <input id="btn1" type="button" value="y = x^2">
+                <input id="btn2" type="button" value="y = x^3">
+                <input id="btn3" type="button" value="y = sin(x)" onclick="fun3()">
+                <input id="btn4" type="button" value="y = cos(x)" onclick="fun4()">
+
                 <select name="slct" id="select">
                     <option name="s1" value="#FF0000">Красный</option>
                     <option name="s2" value="#008000">Зеленый</option>
@@ -48,6 +51,39 @@
         <canvas id="canvas" width="500px" height="500px">
         </canvas>
     </div>
+    <script>
+        $("#btn1").click(function () {
+            let ctx = canvas.getContext('2d');
+            for (i = -15; i < 15; i += 0.01) {
+                ctx.fillStyle = document.forms["data"].select.value;
+                ctx.fillRect(250 + i * 10, 300 - Math.pow(i, 2), 1, 2);
+            }
+        });
+
+        $("#btn2").click(function () {
+            let ctx = canvas.getContext("2d");
+            for (i = -15; i < 15; i += 0.01) {
+                ctx.fillStyle = document.forms["data"].select.value;
+                ctx.fillRect(250 + i * 10, 300 - Math.pow(i, 3), 1, 2);
+            }
+        });
+
+        $("#btn3").click(function () {
+            let ctx = canvas.getContext("2d");
+            for (i = -15; i < 15; i += 0.01) {
+                ctx.fillStyle = document.forms["data"].select.value;
+                ctx.fillRect(250 + i * 10, 300 - Math.sin(i) * 100, 1, 2);
+            }
+        });
+
+        $("#btn4").click(function () {
+            let ctx = canvas.getContext("2d");
+            for (i = -15; i < 15; i += 0.01) {
+                ctx.fillStyle = document.forms["data"].select.value;
+                ctx.fillRect(250 + i * 10, 300 - Math.cos(i) * 100, 1, 2);
+            }
+        });
+    </script>
 </body>
 
 </html>
