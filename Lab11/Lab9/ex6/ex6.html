@@ -42,34 +42,45 @@
         }
     </style>
     <script src="/Lab9/ex4-5/ex4.js"></script>
+    <script src="/jQuerry/jquery-3.5.1.js"></script>
+    <script src="/jQuerry/jquery-ui.min.js"></script>
 </head>
 
 <body>
     <div id="nav"> 
 
-    <div class="menu-item">
+    <div id="menu1" class="menu-item">
         Меню 1
-        <div class="submenu">
+        <div id="submenu1" class="submenu">
             Подменю
         </div>
     </div>
 
-    <div class="menu-item">
+    <div id="menu2" class="menu-item">
         Меню 2
-        <div class="submenu">
+        <div id="submenu2" class="submenu">
             Подменю
         </div>
     </div>
 
-    <div class="menu-item">
+    <div id="menu3" class="menu-item">
         Меню 3
-        <div class="submenu">
+        <div id="submenu3" class="submenu">
             Подменю
         </div>
     </div>
 
     </div>
-    <script src="ex6.js"></script>
-</body>
+    <script>
+        $("#menu1").mouseover(function(){$("#submenu1").css("display", "block");});
+        $("#menu1").mouseout(function(){$("#submenu1").css("display","none");});
+        
+        $("#menu2").mouseover(function(){$("#submenu2").css("display", "block");});
+        $("#menu2").mouseout(function(){$("#submenu2").css("display","none");});
+        
 
+        $("#menu3").mouseover(function(){$("#submenu3").css("display", "block");});
+        $("#menu3").mouseout(function(){$("#submenu3").css("display","none");});
+        </script>
+</body>
 </html>
